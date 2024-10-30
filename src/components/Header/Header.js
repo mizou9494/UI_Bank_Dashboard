@@ -137,12 +137,16 @@ const LaptopAvatar = styled(Avatar)`
   }
 `
 const IconWrapper = styled.div`
-  display: grid;
-  place-content: center;
-  width: 50px;
-  height: 50px;
-  background-color: #F5F7FA;
-  border-radius: 50%;
+  display: none;
+
+  @media ${QUERIES.laptopAndUp} {
+    display: grid;
+    place-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #F5F7FA;
+    border-radius: 50%;
+  }
 `
 
 const PageName = styled.h1`
