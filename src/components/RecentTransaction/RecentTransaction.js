@@ -18,12 +18,12 @@ function RecentTransaction() {
             date={date}
             amount={amount}
             positive={positive}
-            icon={Icon}
+            Icon={Icon}
           />
         ))}
         <Transaction></Transaction>
       </TransactionsGroup>
-      <img style={{ backgroundColor: "red", width: '30px', height: '30px' }} src='../../images/paypal.png' />
+      <img alt='paypal' style={{ backgroundColor: "red", width: '30px', height: '30px' }} src='../../images/paypal.png' />
     </>
   ) 
 }
