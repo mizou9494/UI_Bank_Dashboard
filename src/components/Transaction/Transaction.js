@@ -7,10 +7,17 @@ function Transaction({id, description, date, Icon, iconType, amount, positive}) 
   return (
     <Wrapper>
       <IconWrapper iconType={iconType}>
-        <Icon  />
+        <Icon />
       </IconWrapper>
-      <h3>{description}</h3>
-      <p>{date}</p>
+      <MiddlePart>
+        <TransactionDescription>
+          {description}
+        </TransactionDescription>
+        <span>{date}</span>
+      </MiddlePart>
+      <AmountPart positive={positive}>
+        <span>{positive ? "+" : "-"}{amount}</span>
+      </AmountPart>
     </Wrapper>
   ) 
 }
@@ -21,16 +28,40 @@ const Wrapper = styled.div`
   justify-content: start;
   gap: 20px;
 
-  p  {
-    margin-left: auto;
-  }
+  // p  {
+  //   margin-left: auto;
+  // }
 `;
+
+const TransactionDescription = styled.p`
+  margin: 0;
+  color: #000000;
+  font-weight: 500;
+  font-size: 20px;
+`
+
+const AmountPart = styled.div`
+  font-weight: 500;
+  font-size: 20px;
+  margin-left: auto;
+  display: grid;
+  place-content: center;
+  color: ${(props) => props.positive ? "green" : "red"};
+`
+
+const MiddlePart = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5px;
+`
 
 const IconWrapper = styled.div`
   display: grid;
   place-content: center;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background-color: ${(props) => {
     switch (props.iconType) {
@@ -56,8 +87,9 @@ const IconWrapper = styled.div`
   }};
   
   svg {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
+    font-weight: 500;
   }
 `
 
