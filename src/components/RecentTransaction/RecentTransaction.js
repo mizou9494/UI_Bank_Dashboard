@@ -11,7 +11,7 @@ function RecentTransaction() {
         <h3>Recent Transaction</h3>
       </SectionHead>
       <TransactionsGroup>
-        {transaction_Info.map(({id, description, date, amount, Icon, positive}) => (
+        {transaction_Info.map(({id, description, date, amount, Icon, iconType, positive}) => (
           <Transaction
             key={id}
             description={description}
@@ -19,11 +19,10 @@ function RecentTransaction() {
             amount={amount}
             positive={positive}
             Icon={Icon}
+            iconType={iconType}
           />
         ))}
-        <Transaction></Transaction>
       </TransactionsGroup>
-      <img alt='paypal' style={{ backgroundColor: "red", width: '30px', height: '30px' }} src='../../images/paypal.png' />
     </>
   ) 
 }
@@ -35,8 +34,10 @@ const SectionHead = styled.div`
 `;
 
 const TransactionsGroup = styled.div`
-  width: 100%;
+  padding: 0 20px;
   display: flex;
+  flex-direction: column;
+  gap: 12px;
   justify-content: flex-start;
 `;
 
