@@ -3,8 +3,8 @@ import React from 'react';
 import { Data } from '../../data';
 
 import styled from 'styled-components';
-import PieChart from '../PieChart/PieChart';
 import BarChart from '../BarChart/BarChart';
+import PolarChart from '../PolarChart/PolarChart';
 function WeeklyActivity() {
   const [chartData, setChartData] = React.useState({
     labels: Data.labels.map((label) => label), 
@@ -13,27 +13,31 @@ function WeeklyActivity() {
         label: Data.datasets[0].label,
         data: Data.datasets[0].data,
         backgroundColor: [
-          "rgba(75,192,192,1)",
-          // &quot;#ecf0f1",
-          "#50AF95",
-          "#f3ba2f",
-          "#000000"
+          "violet",
+          "violet",
+          "violet",
+          "violet",
+          "violet"
         ],
         borderColor: "black",
-        borderWidth: 2
+        borderWidth: 1,
+        barThickness: 8,
+        borderRadius: 5,
       },
       {
         label: Data.datasets[1].label,
         data: Data.datasets[1].data,
         backgroundColor: [
-          "rgba(75,192,192,1)",
-          // &quot;#ecf0f1",
-          "#50AF95",
-          "#f3ba2f",
-          "#ffffff"
+          "blue",
+          "blue",
+          "blue",
+          "blue",
+          "blue"
         ],
         borderColor: "black",
-        borderWidth: 2
+        borderWidth: 1,
+        barThickness: 8,
+        borderRadius: 5
       }
     ]
   });
@@ -44,6 +48,7 @@ function WeeklyActivity() {
         <h3>Weekly Activity</h3>
       </SectionHead>
       <BarChart chartData={chartData} />
+      <PolarChart chartData={chartData} />
       {/* <PieChart chartData={chartData} /> */}
     </Wrapper>
   )

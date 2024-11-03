@@ -13,17 +13,17 @@ function BarChart({ chartData }) {
           plugins: {
             title: {
               display: true,
-              text: 'Users Gained between 2016 and 2024'
             },
             legend: {
               display: true,
               labels: {
+                usePointStyle: true,
                 color: '#333',
                 font: {
                   size: 10,
                   weight: 'bold'
                 },
-                boxWidth: 30
+                boxWidth: 10
               }
             }
           }
@@ -36,6 +36,7 @@ function BarChart({ chartData }) {
 const ChartContainer = styled.div`
   display: grid; 
   place-content: center;
+  margin-top: -30px;
 `
 
 export default BarChart;

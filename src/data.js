@@ -1,11 +1,11 @@
 import { DollarSign, Facebook } from "react-feather"
 
 export const Data = {
-    labels: ['Sat', 'Sun', 'Mon,', 'Tue', 'Wed', 'Thu', 'Fri'],
+    labels: ['Sat', 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
     // datasets is an array of objects where each object represents a set of data to display corresponding to the labels above. for brevity, we'll keep it at one object
     datasets: [
         {
-          label: 'Popularity of colours',
+          label: 'Deposits',
           data: [455, 323, 396, 480, 150, 405, 389],
           // you can set indiviual colors for each bar
           backgroundColor: [
@@ -16,7 +16,7 @@ export const Data = {
           borderWidth: 1,
         },
         {
-          label: 'Second example',
+          label: 'Withrawals',
           data: [255, 98, 215, 350, 230, 250, 320],
           // you can set indiviual colors for each bar
           backgroundColor: [
