@@ -45,7 +45,7 @@ const AmountPart = styled.div`
   margin-left: auto;
   display: grid;
   place-content: center;
-  color: ${(props) => props.positive ? "green" : "red"};
+  color: ${(props) => props.positive === "true" ? "green" : "red"};
 `
 
 const MiddlePart = styled.div`

@@ -1,12 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
+
+import 'chart.js/auto';
 import { Bar } from 'react-chartjs-2';
 
-function BarChart({ chatData }) {
+function BarChart({ chartData }) {
   return (
     <ChartContainer>
       <Bar 
-        data={chatData}
+        data={chartData}
         options={{
           plugins: {
             title: {
@@ -14,7 +16,15 @@ function BarChart({ chatData }) {
               text: 'Users Gained between 2016 and 2024'
             },
             legend: {
-              display: false
+              display: true,
+              labels: {
+                color: '#333',
+                font: {
+                  size: 10,
+                  weight: 'bold'
+                },
+                boxWidth: 30
+              }
             }
           }
         }}

@@ -17,21 +17,35 @@ function WeeklyActivity() {
           // &quot;#ecf0f1",
           "#50AF95",
           "#f3ba2f",
-          "#2a71d0"
+          "#000000"
+        ],
+        borderColor: "black",
+        borderWidth: 2
+      },
+      {
+        label: Data.datasets[1].label,
+        data: Data.datasets[1].data,
+        backgroundColor: [
+          "rgba(75,192,192,1)",
+          // &quot;#ecf0f1",
+          "#50AF95",
+          "#f3ba2f",
+          "#ffffff"
         ],
         borderColor: "black",
         borderWidth: 2
       }
     ]
   });
+  
   return (
-    <>
+    <Wrapper>
       <SectionHead>
         <h3>Weekly Activity</h3>
       </SectionHead>
-      <PieChart chartData={chartData} />
       <BarChart chartData={chartData} />
-    </>
+      {/* <PieChart chartData={chartData} /> */}
+    </Wrapper>
   )
 }
 
@@ -41,5 +55,9 @@ const SectionHead = styled.div`
   display: flex;
   justify-content: flex-start;
 `;
+
+const Wrapper = styled.div`
+  padding: 0 20px;
+`
 
 export default WeeklyActivity;
