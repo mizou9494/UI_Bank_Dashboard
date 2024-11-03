@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 
 function Transaction({id, description, date, Icon, iconType, amount, positive}) {
-  console.log(iconType)
   return (
     <Wrapper>
       <IconWrapper iconType={iconType}>
@@ -16,7 +15,7 @@ function Transaction({id, description, date, Icon, iconType, amount, positive}) 
         <span>{date}</span>
       </MiddlePart>
       <AmountPart positive={positive}>
-        <span>{positive ? "+" : "-"}{amount}</span>
+        <span>{positive === "true" ? "+" : "-"}{amount}</span>
       </AmountPart>
     </Wrapper>
   ) 

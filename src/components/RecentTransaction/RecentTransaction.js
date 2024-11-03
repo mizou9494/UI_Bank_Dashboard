@@ -28,6 +28,7 @@ function RecentTransaction() {
 }
 
 const SectionHead = styled.div`
+  margin-top: 20px;
   width: 100%;
   display: flex;
   justify-content: flex-start;

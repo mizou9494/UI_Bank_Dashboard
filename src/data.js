@@ -1,5 +1,23 @@
 import { DollarSign, Facebook } from "react-feather"
 
+export const Data = {
+    labels: ['medium', 'small', 'large'],
+    // datasets is an array of objects where each object represents a set of data to display corresponding to the labels above. for brevity, we'll keep it at one object
+    datasets: [
+        {
+          label: 'Popularity of colours',
+          data: [55, 23, 96],
+          // you can set indiviual colors for each bar
+          backgroundColor: [
+            'rgba(255, 255, 255, 0.6)',
+            'rgba(255, 255, 255, 0.6)',
+            'rgba(255, 255, 255, 0.6)'
+          ],
+          borderWidth: 1,
+        }
+    ]
+}
+
 export const card_Info = [
     {
         id: 1,
@@ -32,7 +50,7 @@ export const transaction_Info = [
         description: 'Deposit from my',
         date: "28 January 2021",
         amount: '$200',
-        positive: true
+        positive: "true"
     },
     {
         id: 2,
@@ -41,7 +59,7 @@ export const transaction_Info = [
         description: 'Jimie Wilson',
         date: "02 January 2021",
         amount: '$5,840',
-        positive: true
+        positive: "true"
     },
     {
         id: 3,
@@ -50,6 +68,6 @@ export const transaction_Info = [
         description: 'Deposit Paypal',
         date: "25 January 2021",
         amount: '$2500',
-        positive: false
+        positive: "false"
     }
 ]
