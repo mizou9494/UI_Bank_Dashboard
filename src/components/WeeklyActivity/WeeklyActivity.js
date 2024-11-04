@@ -5,6 +5,8 @@ import { Data } from '../../data';
 import styled from 'styled-components';
 import BarChart from '../BarChart/BarChart';
 import PolarChart from '../PolarChart/PolarChart';
+import PieChart from '../PieChart/PieChart';
+
 function WeeklyActivity() {
   const [chartData, setChartData] = React.useState({
     labels: Data.labels.map((label) => label), 
@@ -48,8 +50,7 @@ function WeeklyActivity() {
         <h3>Weekly Activity</h3>
       </SectionHead>
       <BarChart chartData={chartData} />
-      <PolarChart chartData={chartData} />
-      {/* <PieChart chartData={chartData} /> */}
+      {/* <PolarChart chartData={chartData} /> */}
     </Wrapper>
   )
 }

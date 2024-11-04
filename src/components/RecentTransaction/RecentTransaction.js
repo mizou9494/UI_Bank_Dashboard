@@ -35,7 +35,7 @@ const SectionHead = styled.div`
 `;
 
 const TransactionsGroup = styled.div`
-  padding: 0 20px;
+  padding: 0 10px;
   display: flex;
   flex-direction: column;
   gap: 12px;

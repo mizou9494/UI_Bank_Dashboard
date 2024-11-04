@@ -7,15 +7,15 @@ import { Pie } from 'react-chartjs-2';
 function PieChart({ chartData }) {
   return (
     <ChartContainer>
-      <h2>Pie Chart</h2>
       <Pie  
         data={chartData}
         options={{
           plugins: {
             title: {
-              display: true,
-              text: 'Users Gained by Month'
-            }
+              display: false,
+              text: 'Users Expenses'
+            },
+            legend: false
           }
         }}
       />
@@ -26,6 +26,8 @@ function PieChart({ chartData }) {
 const ChartContainer = styled.div`
   display: grid; 
   place-content: center;
+  width: 100%;
+  height: 300px;
 `
 
 export default PieChart;

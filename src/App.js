@@ -3,6 +3,7 @@ import Header from './components/Header';
 import CardSection from './components/CardSection';
 import RecentTransaction from './components/RecentTransaction';
 import WeeklyActivity from './components/WeeklyActivity';
+import ExpenseStats from './components/ExpenseStats';
 
 import MaxWidthWrapper from './components/MaxWidthWrapper';
 
@@ -14,6 +15,7 @@ function App() {
         <CardSection />
         <RecentTransaction />
         <WeeklyActivity />
+        <ExpenseStats />
       </MaxWidthWrapper>
     </div>
   );

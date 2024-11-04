@@ -29,6 +29,63 @@ export const Data = {
     ]
 }
 
+export const ExpenseData = {
+    labels: ['Sat', 'Sun', 'Mon', 'Tue'],
+    // datasets is an array of objects where each object represents a set of data to display corresponding to the labels above. for brevity, we'll keep it at one object
+    datasets: [
+        {
+          label: 'Bill Expense',
+          data: [20, 35, 30, 15],
+          // you can set indiviual colors for each bar
+          backgroundColor: [
+            'rgba(255, 000, 005, 0.6)',
+            'rgba(000, 255, 255, 0.6)',
+            'rgba(255, 055, 255, 0.6)',
+            'rgba(000, 000, 000, 0.6)',
+          ],
+          borderWidth: 1,
+        },
+        {
+          label: 'Investment',
+          data: [255, 98, 215, 350, 230, 250, 320],
+          // you can set indiviual colors for each bar
+          backgroundColor: [
+            'rgba(255, 255, 255, 0.6)',
+            'rgba(255, 255, 255, 0.6)',
+            'rgba(255, 255, 255, 0.6)'
+          ],
+          borderWidth: 1,
+        },
+        {
+          label: 'Entertainment',
+          data: [255, 98, 215, 350, 230, 250, 320],
+          // you can set indiviual colors for each bar
+          backgroundColor: [
+            'rgba(255, 255, 255, 0.6)',
+            'rgba(255, 255, 255, 0.6)',
+            'rgba(255, 255, 255, 0.6)'
+          ],
+          borderWidth: 1,
+        },
+        {
+          label: 'Others',
+          data: [255, 98, 215, 350, 230, 250, 320],
+          // you can set indiviual colors for each bar
+          backgroundColor: [
+            'rgba(255, 255, 255, 0.6)',
+            'rgba(255, 255, 255, 0.6)',
+            'rgba(255, 255, 255, 0.6)'
+          ],
+          borderWidth: 1,
+        }
+    ]
+}
+// "1-زيادة العدات"
+// "2-الثبات عند التمرين"
+// "3-البطء أثناء الحركة السلبية"
+// "4-المدى الحركي الكامل"
+// "5-التنقيص في وقت الراحة بين التمارين"
+
 export const card_Info = [
     {
         id: 1,

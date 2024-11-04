@@ -10,6 +10,7 @@ function BarChart({ chartData }) {
       <Bar 
         data={chartData}
         options={{
+          responsive: true,
           plugins: {
             title: {
               display: true,
