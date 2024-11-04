@@ -47,7 +47,7 @@ function ExpenseStats() {
   return (
     <>
       <SectionHead>
-        <h3>Expense StatisticsS</h3>
+        <h3>Expense Statistics</h3>
       </SectionHead>
       <Wrapper>
         <Info1>

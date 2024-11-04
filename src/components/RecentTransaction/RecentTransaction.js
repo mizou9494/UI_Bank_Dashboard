@@ -39,7 +39,7 @@ const TransactionsGroup = styled.div`
   display: flex;
   flex-direction: column;
   gap: 12px;
-  justify-content: flex-start;
+  justify-content: center;
 `;
 
 export default RecentTransaction;

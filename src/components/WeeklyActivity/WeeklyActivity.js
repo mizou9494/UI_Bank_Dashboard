@@ -39,7 +39,7 @@ function WeeklyActivity() {
         borderColor: "black",
         borderWidth: 1,
         barThickness: 8,
-        borderRadius: 5
+        borderRadius: 5,
       }
     ]
   });
@@ -63,7 +63,7 @@ const SectionHead = styled.div`
 `;
 
 const Wrapper = styled.div`
-  padding: 0 20px;
+  padding: 0;
 `
 
 export default WeeklyActivity;

@@ -24,7 +24,8 @@ function Transaction({id, description, date, Icon, iconType, amount, positive}) 
 const Wrapper = styled.div`
   padding: 0 15px;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
+  align-items: center;
   gap: 20px;
 
   // p  {

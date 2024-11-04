@@ -10,6 +10,9 @@ function BarChart({ chartData }) {
       <Bar 
         data={chartData}
         options={{
+          layout: {
+            padding: 0
+          },
           responsive: true,
           plugins: {
             title: {
@@ -29,6 +32,7 @@ function BarChart({ chartData }) {
             }
           }
         }}
+        height={350}
       />
     </ChartContainer>
   )
@@ -37,7 +41,12 @@ function BarChart({ chartData }) {
 const ChartContainer = styled.div`
   display: grid; 
   place-content: center;
-  margin-top: -30px;
+  // margin: -30px 0px -30px 0;
+  // min-height: 400px;
+
+  // & canvas {
+  //   height: 300px !important;
+  // }
 `
 
 export default BarChart;
