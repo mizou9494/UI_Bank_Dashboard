@@ -38,7 +38,7 @@ export const Employees = [
     },
     {
         id: 2,
-        name: 'Wim Waters',
+        name: 'Miws Waters',
         position: 'Director',
         src: '/images/swimming.jpg'
     },
