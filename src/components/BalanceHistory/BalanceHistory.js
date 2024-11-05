@@ -1,7 +1,13 @@
 import React from 'react';
 
+import styled from 'styled-components';
+
 function BalanceHistory() {
-  return <div>BalanceHistory</div>;
+  return <Wrapper>BalanceHistory</Wrapper>
 }
+
+const Wrapper = styled.div`
+  margin-top: 20px;
+`
 
 export default BalanceHistory;

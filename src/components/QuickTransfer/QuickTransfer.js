@@ -62,26 +62,30 @@ const TransferSection = styled.div`
   width: 100%;
   position: relative; 
 
+  & span {
+    font-size: 15px;
+    margin-top: -6px;
+  }
+
   & input {
     max-width: 80px;
-    padding: 0 65px 0 5px;
+    padding: 0 65px 0 10px;
     height: 100%;
     border-radius: 50px;
     border: none;
     outline: none;
     background-color: #EAF0FF;
-    }
-    `
+  }
+`
     
-    const InputWrapper = styled.div`
-    height: 25px;
-    margin-left: auto;
-
+const InputWrapper = styled.div`
+  height: 35px;
+  margin-left: auto;
 `
 
 const TransferButton = styled.button`
   position: absolute;
-  top: 6%;
+  top: 3%;
   right: 0;
   display: flex;
   align-items: center;
@@ -91,6 +95,7 @@ const TransferButton = styled.button`
   color: white;
   background-color: blue;
   width: 60px;
+  height: 34px;
 `
 
 const EmployeeName = styled.div`
