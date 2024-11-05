@@ -29,6 +29,27 @@ export const Data = {
     ]
 }
 
+export const Employees = [
+    {
+        id: 1,
+        name: 'Zayanb Charef',
+        position: 'CEO',
+        src: '/images/zaynab.jpg'
+    },
+    {
+        id: 2,
+        name: 'Wim Waters',
+        position: 'Director',
+        src: '/images/swimming.jpg'
+    },
+    {
+        id: 3,
+        name: "Hamza Bitar",
+        position: 'Developer',
+        src: '/images/hamza.jpg'
+    }
+]
+
 export const ExpenseData = {
     labels: ['Sat', 'Sun', 'Mon', 'Tue'],
     // datasets is an array of objects where each object represents a set of data to display corresponding to the labels above. for brevity, we'll keep it at one object

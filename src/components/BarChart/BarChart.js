@@ -32,7 +32,7 @@ function BarChart({ chartData }) {
             }
           }
         }}
-        height={350}
+        height={150}
       />
     </ChartContainer>
   )

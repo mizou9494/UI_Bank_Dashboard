@@ -4,8 +4,11 @@ import CardSection from './components/CardSection';
 import RecentTransaction from './components/RecentTransaction';
 import WeeklyActivity from './components/WeeklyActivity';
 import ExpenseStats from './components/ExpenseStats';
+import QuickTransfer from './components/QuickTransfer';
+import BalanceHistory from './components/BalanceHistory';
 
 import MaxWidthWrapper from './components/MaxWidthWrapper';
+
 
 function App() {
   return (
@@ -16,6 +19,8 @@ function App() {
         <RecentTransaction />
         <WeeklyActivity />
         <ExpenseStats />
+        <QuickTransfer />
+        <BalanceHistory />
       </MaxWidthWrapper>
     </div>
   );

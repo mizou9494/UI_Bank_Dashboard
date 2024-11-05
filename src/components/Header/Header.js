@@ -11,7 +11,7 @@ function Header({children}) {
       <UpperNav>
         <Menu />
         <PageName>Overview</PageName>
-        <Avatar alt="avatar" src="/images/avatar-stephen-abebe.jpg"></Avatar>
+        <Avatar alt="avatar" src="/images/avatar-stephen-abebe.jpg" />
       </UpperNav>
       <MainNav>
         <LeftNavPart>
