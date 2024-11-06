@@ -100,13 +100,15 @@ const TransferButton = styled.button`
 
 const EmployeeName = styled.div`
   color: black;
+  font-size: 15px;
 `
 
 const Avatar = styled.img`
   border-radius: 50%;
   display: block;
-  width: 65px;
-  height: 65px;
+  width: 62px;
+  height: 62px;
+  margin-bottom: 10px;
 `
 
 const AvatarColumn = styled.div`
@@ -120,7 +122,7 @@ const AvatarSection = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 10px;
+  gap: 13px;
 `
 
 const SectionHead = styled.div`

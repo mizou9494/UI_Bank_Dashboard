@@ -32,7 +32,7 @@ export const Data = {
 export const Employees = [
     {
         id: 1,
-        name: 'Zayanb Charef',
+        name: 'Zaynab Charef',
         position: 'CEO',
         src: '/images/zaynab.jpg'
     },
@@ -49,6 +49,11 @@ export const Employees = [
         src: '/images/hamza.jpg'
     }
 ]
+
+export const Balance_History = {
+  labels: ['Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb'],
+  data: [100, 230, 440, 720, 200, 550, 240, 560]
+}
 
 export const ExpenseData = {
     labels: ['Sat', 'Sun', 'Mon', 'Tue'],

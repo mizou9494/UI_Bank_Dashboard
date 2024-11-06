@@ -24,10 +24,10 @@ function Header({children}) {
             <StyledInput placeholder="Search for something" />
           </SearchContainer>
           <IconWrapper>
-            <Bell color='red' />
+            <Settings />
           </IconWrapper>
           <IconWrapper>
-            <Settings />
+            <Bell color='red' />
           </IconWrapper>
           <LaptopAvatar alt="avatar" src="/images/avatar-stephen-abebe.jpg"></LaptopAvatar>
         </RightNavPart>
@@ -106,7 +106,7 @@ const SearchContainer = styled.div`
 const StyledInput = styled.input`
   width: 100%;
   padding: 8px 8px 8px 48px;
-  border-radius: 50%;
+  border-radius: 50px;
   outline: none;
   border: none;
   background-color: transparent;
