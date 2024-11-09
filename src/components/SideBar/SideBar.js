@@ -35,12 +35,6 @@ const Container = styled.div`
   transition: left 0.1s ease-in-out;
   padding: 15px 25px;
   z-index: 15;
-  
-  @media ${QUERIES.laptopAndUp} {
-    grid-area: sidebar;
-    top: 60px;
-    left: 0;
-  }
 `;
     
 const Wrapper = styled.div`

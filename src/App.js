@@ -28,7 +28,9 @@ function App() {
     <div className="App">
       <Wrapper>
         <Header toggleSidebar={toggleSidebar} />
-        <SideBar isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+        <Container>
+          <SideBar isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+        </Container>
         <Overlay isOpen={isSidebarOpen} onClick={toggleSidebar} />
         <Main>
           <MaxWidthWrapper as='main'>
@@ -56,6 +58,16 @@ const Wrapper = styled.div`
     grid-template-areas:
       "nav nav"
       "sidebar main"
+  }
+`
+
+const Container = styled.div`
+  grid-area: sidebar;
+    
+  @media ${QUERIES.laptopAndUp} {
+    // position: fixed;
+    top: 60px;
+    left: 0;
   }
 `
 

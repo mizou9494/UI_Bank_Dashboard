@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import { QUERIES } from '../../constants';
 
-function Header({toggleSidebar, children}) {
+function Header({toggleSidebar }) {
   
   return (
     <Wrapper>
@@ -79,6 +79,7 @@ const Logo = styled.h1`
 `
 
 const Wrapper = styled.div`
+  width: 100%;
   padding: 15px 25px;
   display: flex;
   gap: 10px;
