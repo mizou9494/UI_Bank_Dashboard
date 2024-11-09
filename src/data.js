@@ -1,4 +1,52 @@
-import { DollarSign, Facebook } from "react-feather"
+import { DollarSign, Facebook, Home, User, CreditCard, Moon, Settings } from "react-feather"
+
+export const LinksData = [
+  {
+    id: 1,
+    label: "Home",
+    Icon: Home
+  },
+  {
+    id: 2,
+    label: "Transactions",
+    Icon: DollarSign
+  },
+  {
+    id: 3,
+    label: "Accounts",
+    Icon: User
+  },
+  {
+    id: 4,
+    label: "Investments",
+    Icon: DollarSign
+  },
+  {
+    id: 5,
+    label: "Credit Cards",
+    Icon: CreditCard
+  },
+  {
+    id: 6,
+    label: "Loans",
+    Icon: DollarSign
+  },
+  {
+    id: 8,
+    label: "Services",
+    Icon: Settings
+  },
+  {
+    id: 7,
+    label: "My Privileges",
+    Icon: Moon
+  },
+  {
+    id: 9,
+    label: "Setting",
+    Icon: Settings
+  },
+]
 
 export const Data = {
     labels: ['Sat', 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri'],

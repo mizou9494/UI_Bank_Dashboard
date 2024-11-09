@@ -4,12 +4,14 @@ import styled from 'styled-components';
 
 import { QUERIES } from '../../constants';
 
-function Header({children}) {
+function Header({toggleSidebar, children}) {
   
   return (
     <Wrapper>
       <UpperNav>
-        <Menu />
+        <HamburgerMenu onClick={toggleSidebar} >
+          <Menu />
+        </HamburgerMenu>
         <PageName>Overview</PageName>
         <Avatar alt="avatar" src="/images/avatar-stephen-abebe.jpg" />
       </UpperNav>
@@ -42,6 +44,10 @@ const MainNav = styled.div`
   justify-content: space-between;
   width: 100%;
 `
+const HamburgerMenu = styled.div`
+  cursor: pointer;
+`
+
 const LeftNavPart = styled.div`
   display: none;
 
@@ -80,6 +86,17 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   color: #343C6A;
+  // width: 100%;
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // background-color: white;
+  // z-index: 15;
+
+  @media ${QUERIES.laptopAndUp} {
+    grid-area: nav;
+    background-color: white;
+  }
 `;
 
 const UpperNav = styled.div`
