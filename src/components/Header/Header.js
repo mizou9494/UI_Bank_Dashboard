@@ -4,12 +4,12 @@ import styled from 'styled-components';
 
 import { QUERIES } from '../../constants';
 
-function Header({children}) {
+function Header({ toggleSidebar }) {
   
   return (
     <Wrapper>
       <UpperNav>
-        <Menu />
+        <Menu onClick={toggleSidebar} />
         <PageName>Overview</PageName>
         <Avatar alt="avatar" src="/images/avatar-stephen-abebe.jpg" />
       </UpperNav>
