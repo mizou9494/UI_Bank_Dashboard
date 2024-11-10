@@ -16,7 +16,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <div className="App">
-     <BrowserRouter>
+     <>
          <Routes>
             <Route path="/" element={<SharedLayout />}>
                <Route index element={<Overview />} />
@@ -32,7 +32,7 @@ function App() {
                <Route path="/:surahId/:verseNumber" element={<SurahWithSingleVerse />} /> */}
             </Route>
          </Routes>
-      </BrowserRouter>
+      </>
     </div>
   );
 }
