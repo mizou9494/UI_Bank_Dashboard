@@ -3,9 +3,13 @@ import React from 'react';
 import styled from 'styled-components';
 import {Balance_History} from '../../data';
 
+import { useNavigate } from 'react-router-dom';
+
 import LineChart from '../LineChart/LineChart';
 
 function BalanceHistory() {
+  const navigate = useNavigate();
+
   const [data, setData] = React.useState({
     labels: Balance_History.labels,
     datasets: [{
@@ -25,6 +29,7 @@ function BalanceHistory() {
   });
 
   return (
+
     <>
       <SectionHead>
         <h3>Balance History</h3>

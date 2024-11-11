@@ -16,13 +16,31 @@ function SharedLayout() {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
+  const pageNames = {
+    '/': 'Overview',
+    '/Transaction': 'Transaction',
+    '/Accounts': 'Accounts',
+    '/Investments': 'Investments',
+    '/Credit_Cards': 'Credit Cards',
+    '/Loans': 'Loans',
+    '/Services': 'Services',
+    '/Settings': 'Settings',
+  };
+
+    // Determine the current page name
+    const currentPageName = Object.keys(pageNames).find((path) =>
+      location.pathname.startsWith(path)
+  ) || 'Page';
+  
   React.useEffect(() => {
     window.scrollTo(0, 0);
+    console.log(location.pathname)
+
   }, [location]);
 
   return (
     <>
-      <Header toggleSidebar={toggleSidebar} />
+      <Header pageName={pageNames[currentPageName]} toggleSidebar={toggleSidebar} />
       <SideBar isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
       <Overlay isOpen={isSidebarOpen} onClick={toggleSidebar} />
       <Outlet />

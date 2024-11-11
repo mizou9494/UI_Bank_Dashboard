@@ -16,7 +16,7 @@ function SideBar({ isSidebarOpen, toggleSidebar }) {
       </CloseButton>
       <Wrapper>
         {LinksData.map(({label, Icon}) => (
-          <Link href='/'> <Icon /> {label}</Link>
+          <Link key={label} href='/'> <Icon /> {label}</Link>
         ))}
       </Wrapper>
     
@@ -32,7 +32,7 @@ const Container = styled.div`
   min-width: 250px;
   top: 60px;
   left: ${({ isSidebarOpen }) => (isSidebarOpen ? '0' : '-290px')};
-  transition: left 0.1s ease-in-out;
+  transition: left 0.3s ease-in-out;
   padding: 30px 0px 0px 50px;
   z-index: 3;
 `;
@@ -83,12 +83,13 @@ const Link = styled.a`
   display: flex;
   justify-content: flex-start;
   gap: 15px;
-  padding: 15px 0px;
+  padding: 15px 25px;
   cursor: pointer;
   text-decoration: none;
 
   &:hover {
     color: blue;
+    border-left: 2px solid blue;
   }
 `
 

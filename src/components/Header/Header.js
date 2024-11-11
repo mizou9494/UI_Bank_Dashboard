@@ -4,19 +4,19 @@ import styled from 'styled-components';
 
 import { QUERIES } from '../../constants';
 
-function Header({ toggleSidebar }) {
+function Header({ toggleSidebar, pageName }) {
   
   return (
     <Wrapper>
       <UpperNav>
-        <Menu onClick={toggleSidebar} />
+        <Menu onClick={toggleSidebar} style={{cursor: 'pointer'}} />
         <PageName>Overview</PageName>
         <Avatar alt="avatar" src="/images/avatar-stephen-abebe.jpg" />
       </UpperNav>
       <MainNav>
         <LeftNavPart>
           <Logo>BankDash.</Logo>
-          <PageName>Overview</PageName>
+          <PageName>{pageName}</PageName>
         </LeftNavPart>
         <RightNavPart>
           <SearchContainer>
