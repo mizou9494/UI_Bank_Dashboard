@@ -5,18 +5,21 @@ import { X } from 'react-feather';
 import { QUERIES } from '../../constants';
 import styled from 'styled-components'
 import { LinksData } from '../../data';
+import { useNavigate } from 'react-router-dom';
 
 // import Link from '../Link/Link';
 
 function SideBar({ isSidebarOpen, toggleSidebar }) {
+  const navigate = useNavigate();
+
   return (
     <Container isSidebarOpen={isSidebarOpen}>
       <CloseButton onClick={toggleSidebar}>
         <X color='black' size={34} />
       </CloseButton>
       <Wrapper>
-        {LinksData.map(({label, Icon}) => (
-          <Link key={label} href='/'> <Icon /> {label}</Link>
+        {LinksData.map(({label, Icon, path}) => (
+          <Link key={label} href='/' onClick={() => navigate(`/${path}`)}> <Icon />{label}</Link>
         ))}
       </Wrapper>
     

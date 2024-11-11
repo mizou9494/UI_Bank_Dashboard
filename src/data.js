@@ -4,46 +4,55 @@ export const LinksData = [
   {
     id: 1,
     label: "Home",
+    path: "Home",
     Icon: Home
   },
   {
     id: 2,
     label: "Transactions",
+    path: "Transactions",
     Icon: DollarSign
   },
   {
     id: 3,
     label: "Accounts",
+    path: "Accounts",
     Icon: User
   },
   {
     id: 4,
     label: "Investments",
+    path: "Investments",
     Icon: DollarSign
   },
   {
     id: 5,
     label: "Credit Cards",
+    path: "Credit_Cards",
     Icon: CreditCard
   },
   {
     id: 6,
     label: "Loans",
+    path: "Loans",
     Icon: DollarSign
   },
   {
     id: 8,
     label: "Services",
+    path: "Services",
     Icon: Settings
   },
   {
     id: 7,
-    label: "My Privileges",
+    label: "Privileges",
+    path: "Privileges",
     Icon: Moon
   },
   {
     id: 9,
     label: "Setting",
+    path: "Setting",
     Icon: Settings
   },
 ]

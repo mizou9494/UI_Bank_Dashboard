@@ -3,7 +3,7 @@ import './App.css';
 import SharedLayout from '../src/components/SharedLayout';
 
 import Overview from './components/Overview';
-// import Transactions from './components/Transactions';
+import RecentTransactions from './components/RecentTransaction';
 // import Accounts from './components/Accounts';
 // import Investments from './components/Investments';
 // import CreditCards from './components/CreditCards';
@@ -20,8 +20,8 @@ function App() {
          <Routes>
             <Route path="/" element={<SharedLayout />}>
                <Route index element={<Overview />} />
-               {/* <Route path="/Transactions" element={<Transactions />} />
-               <Route path="/Accounts" element={<Accounts />} />
+               <Route path="/Transactions" element={<RecentTransactions />} />
+               {/* <Route path="/Accounts" element={<Accounts />} />
                <Route path="/Investments" element={<Investments />} />
                <Route path="/Credit_Cards" element={<CreditCards />} />
                <Route path="/Loans" element={<Loans />} />
