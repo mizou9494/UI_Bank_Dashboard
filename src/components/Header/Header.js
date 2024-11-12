@@ -10,7 +10,6 @@ function Header({ toggleSidebar, pageName }) {
   return (
     <Wrapper>
       <UpperNav>
-
         <Menu onClick={toggleSidebar} style={{cursor: 'pointer'}} />
         <PageName>Overview</PageName>
         <Avatar alt="avatar" src="/images/avatar-stephen-abebe.jpg" />

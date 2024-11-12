@@ -16,12 +16,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
 
-  const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
-
-  const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-  };
-
   return (
     <div className="App">
 
