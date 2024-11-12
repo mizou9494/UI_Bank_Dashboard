@@ -1,20 +1,18 @@
 import React from 'react';
 import './App.css';
 
-import styled from 'styled-components';
-import { QUERIES } from './constants';
+import SharedLayout from '../src/components/SharedLayout';
 
-import Header from './components/Header';
-import CardSection from './components/CardSection';
-import RecentTransaction from './components/RecentTransaction';
-import WeeklyActivity from './components/WeeklyActivity';
-import ExpenseStats from './components/ExpenseStats';
-import QuickTransfer from './components/QuickTransfer';
-import BalanceHistory from './components/BalanceHistory';
-import SideBar from './components/SideBar';
+import Overview from './components/Overview';
+import RecentTransactions from './components/RecentTransaction';
+// import Accounts from './components/Accounts';
+// import Investments from './components/Investments';
+// import CreditCards from './components/CreditCards';
+// import Loans from './components/Loans';
+// import Services from './components/Services';
+// import Settings from './components/Settings';
 
-import MaxWidthWrapper from './components/MaxWidthWrapper';
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
 
@@ -26,26 +24,37 @@ function App() {
 
   return (
     <div className="App">
-      <Wrapper>
-        <Header toggleSidebar={toggleSidebar} />
-        <Container>
-          <SideBar isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
-        </Container>
-        <Overlay isOpen={isSidebarOpen} onClick={toggleSidebar} />
-        <Main>
-          <MaxWidthWrapper as='main'>
-            <CardSection />
-            <RecentTransaction />
-            <WeeklyActivity />
-            <ExpenseStats />
-            <QuickTransfer />
-            <BalanceHistory />
-          </MaxWidthWrapper>
-        </Main>
-      </Wrapper>
+
+
+     <>
+         <Routes>
+            <Route path="/" element={<SharedLayout />}>
+               <Route index element={<Overview />} />
+               <Route path="/Transactions" element={<RecentTransactions />} />
+               {/* <Route path="/Accounts" element={<Accounts />} />
+               <Route path="/Investments" element={<Investments />} />
+               <Route path="/Credit_Cards" element={<CreditCards />} />
+               <Route path="/Loans" element={<Loans />} />
+               <Route path="/Services" element={<Services />} />
+               <Route path="/Settings" element={<Settings />} /> */}
+               {/* this below is a the route for the quran surat*/}
+               {/* <Route path="/:surahId" element={<Surah />} />
+               <Route path="/:surahId/:verseNumber" element={<SurahWithSingleVerse />} /> */}
+            </Route>
+         </Routes>
+      </>
     </div>
   );
 }
+{/* <Header />
+<MaxWidthWrapper as='main'>
+  <CardSection />
+  <RecentTransaction />
+  <WeeklyActivity />
+  <ExpenseStats />
+  <QuickTransfer />
+  <BalanceHistory />
+</MaxWidthWrapper> */}
 
 const Wrapper = styled.div`
   width: 100%;

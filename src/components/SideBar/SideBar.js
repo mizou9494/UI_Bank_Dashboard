@@ -6,17 +6,22 @@ import { QUERIES } from '../../constants';
 import styled from 'styled-components'
 import { LinksData } from '../../data';
 
+import { useNavigate } from 'react-router-dom';
+
 // import Link from '../Link/Link';
 
 function SideBar({ isSidebarOpen, toggleSidebar }) {
+
+  const navigate = useNavigate();
+
   return (
     <Container isSidebarOpen={isSidebarOpen}>
       <CloseButton onClick={toggleSidebar}>
         <X color='black' size={34} />
       </CloseButton>
       <Wrapper>
-        {LinksData.map(({label, Icon}) => (
-          <Link href='/'> <Icon /> {label}</Link>
+        {LinksData.map(({label, Icon, path}) => (
+          <Link key={label} href='/' onClick={() => navigate(`/${path}`)}> <Icon />{label}</Link>
         ))}
       </Wrapper>
     
@@ -32,9 +37,9 @@ const Container = styled.div`
   min-width: 250px;
   top: 60px;
   left: ${({ isSidebarOpen }) => (isSidebarOpen ? '0' : '-290px')};
-  transition: left 0.1s ease-in-out;
-  padding: 15px 25px;
-  z-index: 15;
+  transition: left 0.3s ease-in-out;
+  padding: 30px 0px 0px 50px;
+  z-index: 3;
 `;
     
 const Wrapper = styled.div`
@@ -44,7 +49,13 @@ const Wrapper = styled.div`
   
   
   @media ${QUERIES.laptopAndUp} {
-    width: 100%;
+    // display: flex;
+    // flex-direction: column;
+    // gap: 15px;
+    // justify-content: center;
+    // align-items: center;
+    // width: 100%;
+    // padding: 0px;
     
   //   display: revert;
   //   height: 100%;
@@ -77,12 +88,14 @@ const Link = styled.a`
   display: flex;
   justify-content: flex-start;
   gap: 15px;
-  padding: 15px 0px;
+
+  padding: 15px 25px;
   cursor: pointer;
   text-decoration: none;
 
   &:hover {
     color: blue;
+    border-left: 2px solid blue;
   }
 `
 
