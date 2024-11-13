@@ -14,14 +14,22 @@ function SideBar({ isSidebarOpen, toggleSidebar }) {
 
   const navigate = useNavigate();
 
+  const handleNavigation = (path) => {
+    if(path === 'Home'){
+      navigate(`/`)
+    } else {
+      navigate(`/${path}`)
+    }
+  }
+
   return (
-    <Container isSidebarOpen={isSidebarOpen}>
+    <Container $isSidebarOpen={isSidebarOpen}>
       <CloseButton onClick={toggleSidebar}>
         <X color='black' size={34} />
       </CloseButton>
       <Wrapper>
         {LinksData.map(({label, Icon, path}) => (
-          <Link key={label} href='/' onClick={() => navigate(`/${path}`)}> <Icon />{label}</Link>
+          <Link key={label} href={`/${path}`}> <Icon />{label}</Link>
         ))}
       </Wrapper>
     
@@ -36,7 +44,7 @@ const Container = styled.div`
   background-color: white;
   min-width: 250px;
   top: 60px;
-  left: ${({ isSidebarOpen }) => (isSidebarOpen ? '0' : '-290px')};
+  left: ${({ $isSidebarOpen }) => ($isSidebarOpen ? '0' : '-300px')};
   transition: left 0.3s ease-in-out;
   padding: 30px 0px 0px 50px;
   z-index: 3;

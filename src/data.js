@@ -4,7 +4,7 @@ export const LinksData = [
   {
     id: 1,
     label: "Home",
-    path: "Home",
+    path: "",
     Icon: Home
   },
   {
@@ -197,7 +197,7 @@ export const transaction_Info = [
     {
         id: 1,
         Icon: DollarSign,
-        iconType: "DollarSign",
+        icontype: "DollarSign",
         description: 'Deposit from my',
         date: "28 January 2021",
         amount: '$200',
@@ -206,7 +206,7 @@ export const transaction_Info = [
     {
         id: 2,
         Icon: DollarSign,
-        iconType: "DollarSign",
+        icontype: "DollarSign",
         description: 'Jimie Wilson',
         date: "02 January 2021",
         amount: '$5,840',
@@ -215,7 +215,7 @@ export const transaction_Info = [
     {
         id: 3,
         Icon: Facebook,
-        iconType: "Facebook",
+        icontype: "Facebook",
         description: 'Deposit Paypal',
         date: "25 January 2021",
         amount: '$2500',

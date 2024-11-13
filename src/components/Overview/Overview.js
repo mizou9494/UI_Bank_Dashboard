@@ -9,6 +9,7 @@ import QuickTransfer from '../QuickTransfer';
 import BalanceHistory from '../BalanceHistory';
 
 function Overview() {
+
   return (
     <>
       <MaxWidthWrapper as='main'>

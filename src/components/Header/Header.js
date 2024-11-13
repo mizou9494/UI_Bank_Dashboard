@@ -6,12 +6,12 @@ import { QUERIES } from '../../constants';
 
 
 function Header({ toggleSidebar, pageName }) {
-  
+
   return (
     <Wrapper>
       <UpperNav>
         <Menu onClick={toggleSidebar} style={{cursor: 'pointer'}} />
-        <PageName>Overview</PageName>
+        <PageName>{pageName}</PageName>
         <Avatar alt="avatar" src="/images/avatar-stephen-abebe.jpg" />
       </UpperNav>
       <MainNav>
@@ -78,7 +78,6 @@ const Logo = styled.h1`
 `
 
 const Wrapper = styled.div`
-  width: 100%;
   padding: 15px 25px;
   display: flex;
   gap: 10px;

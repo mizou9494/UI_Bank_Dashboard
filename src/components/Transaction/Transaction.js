@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 
-function Transaction({id, description, date, Icon, iconType, amount, positive}) {
+function Transaction({id, description, date, Icon, icontype, amount, positive}) {
   return (
     <Wrapper>
-      <IconWrapper iconType={iconType}>
+      <IconWrapper $icontype={icontype}>
         <Icon />
       </IconWrapper>
       <MiddlePart>
@@ -14,7 +14,7 @@ function Transaction({id, description, date, Icon, iconType, amount, positive}) 
         </TransactionDescription>
         <span>{date}</span>
       </MiddlePart>
-      <AmountPart positive={positive}>
+      <AmountPart $positive={positive}>
         <span>{positive === "true" ? "+" : "-"}{amount}</span>
       </AmountPart>
     </Wrapper>
@@ -46,7 +46,7 @@ const AmountPart = styled.div`
   margin-left: auto;
   display: grid;
   place-content: center;
-  color: ${(props) => props.positive === "true" ? "green" : "red"};
+  color: ${(props) => props.$positive === "true" ? "green" : "red"};
 `
 
 const MiddlePart = styled.div`
@@ -64,7 +64,7 @@ const IconWrapper = styled.div`
   height: 50px;
   border-radius: 50%;
   background-color: ${(props) => {
-    switch (props.iconType) {
+    switch (props.$icontype) {
       case "Facebook":
         return "#e7edff";
       case "DollarSign":
@@ -76,7 +76,7 @@ const IconWrapper = styled.div`
   }};
 
   color: ${(props) => {
-    switch (props.iconType) {
+    switch (props.$icontype) {
       case "Facebook":
         return "#396aff";
       case "DollarSign":

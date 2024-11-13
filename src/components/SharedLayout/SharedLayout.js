@@ -11,14 +11,13 @@ function SharedLayout() {
   const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
 
   const location = useLocation();
-  
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
   const pageNames = {
     '/': 'Overview',
-    '/Transaction': 'Transaction',
+    '/Transactions': 'Transactions',
     '/Accounts': 'Accounts',
     '/Investments': 'Investments',
     '/Credit_Cards': 'Credit Cards',
@@ -27,14 +26,19 @@ function SharedLayout() {
     '/Settings': 'Settings',
   };
 
-    // Determine the current page name
-    const currentPageName = Object.keys(pageNames).find((path) =>
-      location.pathname.startsWith(path)
-  ) || 'Page';
+  // Determine the current page name
+const currentPageName = Object.keys(pageNames)
+  .sort((a, b) => b.length - a.length)
+  .find((path) => location.pathname.startsWith(path)) || 'Page';
+  console.log(currentPageName)
+  // outputs '/'
   
   React.useEffect(() => {
     window.scrollTo(0, 0);
-    console.log(location.pathname)
+    console.log('Current path',location.pathname) 
+    // outputs '/Transactions'
+    console.log('Current page name', pageNames[currentPageName])
+    // outputs 'Transactions' now when we are on the /Transactions page
 
   }, [location]);
 
@@ -42,14 +46,14 @@ function SharedLayout() {
     <>
       <Header pageName={pageNames[currentPageName]} toggleSidebar={toggleSidebar} />
       <SideBar isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
-      <Overlay isOpen={isSidebarOpen} onClick={toggleSidebar} />
+      <Overlay $isOpen={isSidebarOpen} onClick={toggleSidebar} />
       <Outlet />
     </>
   )
 }
 
 const Overlay = styled.div`
-  display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
+  display: ${({ $isOpen }) => ($isOpen ? 'block' : 'none')};
   position: fixed;
   top: 0;
   left: 0;

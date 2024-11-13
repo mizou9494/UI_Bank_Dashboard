@@ -11,7 +11,7 @@ function RecentTransaction() {
         <h3>Recent Transaction</h3>
       </SectionHead>
       <TransactionsGroup>
-        {transaction_Info.map(({id, description, date, amount, Icon, iconType, positive}) => (
+        {transaction_Info.map(({id, description, date, amount, Icon, icontype, positive}) => (
           <Transaction
             key={id}
             description={description}
@@ -19,7 +19,7 @@ function RecentTransaction() {
             amount={amount}
             positive={positive}
             Icon={Icon}
-            iconType={iconType}
+            icontype={icontype}
           />
         ))}
       </TransactionsGroup>
