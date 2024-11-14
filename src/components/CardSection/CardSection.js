@@ -1,16 +1,18 @@
 import React from 'react';
 import { card_Info } from '../../data';
 
+import { Plus } from 'react-feather';
+
 import styled from 'styled-components';
 
 import Card from '../Card/Card';
 
-function CardSection() {
+function CardSection({ buttonName = "See All" }) {
   return (
     <>
       <SectionHead>
         <h3>My Cards</h3>
-        <SeeAllButton>View All</SeeAllButton>
+        <Button>{buttonName === "See All" ? buttonName : <><Plus />{buttonName}</>}</Button>
       </SectionHead>
       <CardSectionWrapper>
         {card_Info.map(({id, holder_name, card_number, expiration_date, balance}) => (
@@ -34,19 +36,24 @@ const SectionHead = styled.div`
   color: #343C6A;
 `;
 
-const SeeAllButton = styled.button`
+const Button = styled.button`
   font-weight: 600;
   font-size: 16px;
   background-color: transparent;
   border: none;
   color: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 `
   
 
 const CardSectionWrapper = styled.div`
   display: flex;
   gap: 20px;
-  overflow-x: scroll;
+  overflow-x: auto;
 `
 
 export default CardSection;

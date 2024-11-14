@@ -2,11 +2,17 @@ import React from 'react';
 
 import styled from 'styled-components';
 
+import CardSection from '../CardSection';
+
 import Transaction from '../Transaction/Transaction';
 import { transaction_Info } from '../../data';
+import { useLocation } from 'react-router-dom';
 function RecentTransaction() {
+  const location = useLocation();
+
   return (
     <>
+      {location.pathname === "/Transactions" ? <CardSection buttonName="Add Card" /> : null}
       <SectionHead>
         <h3>Recent Transaction</h3>
       </SectionHead>
@@ -19,7 +25,7 @@ function RecentTransaction() {
             amount={amount}
             positive={positive}
             Icon={Icon}
-            icontype={icontype}
+            iconType={icontype}
           />
         ))}
       </TransactionsGroup>

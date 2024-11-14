@@ -115,6 +115,8 @@ const SearchContainer = styled.div`
   height: 50px;
   background-color: #F5F7FA;
   display: flex;
+  border-radius: 50px;
+
 
   // place-content: center;
 `;
@@ -122,7 +124,6 @@ const SearchContainer = styled.div`
 const StyledInput = styled.input`
   width: 100%;
   padding: 8px 8px 8px 48px;
-  border-radius: 50px;
   outline: none;
   border: none;
   background-color: transparent;

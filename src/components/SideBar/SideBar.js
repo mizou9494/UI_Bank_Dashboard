@@ -6,21 +6,7 @@ import { QUERIES } from '../../constants';
 import styled from 'styled-components'
 import { LinksData } from '../../data';
 
-import { useNavigate } from 'react-router-dom';
-
-// import Link from '../Link/Link';
-
 function SideBar({ isSidebarOpen, toggleSidebar }) {
-
-  const navigate = useNavigate();
-
-  const handleNavigation = (path) => {
-    if(path === 'Home'){
-      navigate(`/`)
-    } else {
-      navigate(`/${path}`)
-    }
-  }
 
   return (
     <Container $isSidebarOpen={isSidebarOpen}>

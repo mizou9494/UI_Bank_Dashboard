@@ -6,6 +6,7 @@ import { Outlet, useLocation } from "react-router-dom";
 
 import Header from '../Header';
 import SideBar from '../SideBar';
+import MaxWidthWrapper from '../MaxWidthWrapper';
 
 function SharedLayout() {
   const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
@@ -43,12 +44,12 @@ const currentPageName = Object.keys(pageNames)
   }, [location]);
 
   return (
-    <>
+    <MaxWidthWrapper>
       <Header pageName={pageNames[currentPageName]} toggleSidebar={toggleSidebar} />
       <SideBar isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
       <Overlay $isOpen={isSidebarOpen} onClick={toggleSidebar} />
       <Outlet />
-    </>
+    </MaxWidthWrapper>
   )
 }
 

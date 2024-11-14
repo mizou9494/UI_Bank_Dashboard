@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 
-function Transaction({id, description, date, Icon, icontype, amount, positive}) {
+function Transaction({id, description, date, Icon, iconType, amount, positive}) {
   return (
     <Wrapper>
-      <IconWrapper $icontype={icontype}>
+      <IconWrapper $iconType={iconType}>
         <Icon />
       </IconWrapper>
       <MiddlePart>
@@ -64,7 +64,7 @@ const IconWrapper = styled.div`
   height: 50px;
   border-radius: 50%;
   background-color: ${(props) => {
-    switch (props.$icontype) {
+    switch (props.$iconType) {
       case "Facebook":
         return "#e7edff";
       case "DollarSign":
@@ -76,7 +76,7 @@ const IconWrapper = styled.div`
   }};
 
   color: ${(props) => {
-    switch (props.$icontype) {
+    switch (props.$iconType) {
       case "Facebook":
         return "#396aff";
       case "DollarSign":
