@@ -19,11 +19,11 @@ function BalanceHistory() {
       backgroundColor: 'green',
       borderColor: 'blue',
       tension: .8,
-      pointBackgroundColor: 'red',
-      pointHoverBackgroundColor: 'white',
+      pointBackgroundColor: 'white',
+      pointHoverBackgroundColor: 'red',
       showPoints: false,
       hoverBorderColor: 'red',
-      radius: 2.2
+      radius: 5
       // indexAxis: 'y'
     }]
   });
