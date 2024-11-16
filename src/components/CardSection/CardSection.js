@@ -12,7 +12,7 @@ function CardSection({ buttonName = "See All" }) {
     <>
       <SectionHead>
         <h3>My Cards</h3>
-        <Button>{buttonName === "See All" ? buttonName : <><Plus />{buttonName}</>}</Button>
+        <Button>{buttonName === "See All" ? buttonName : <><Plus size={20} />{buttonName}</>}</Button>
       </SectionHead>
       <CardSectionWrapper>
         {card_Info.map(({id, holder_name, card_number, expiration_date, balance}) => (

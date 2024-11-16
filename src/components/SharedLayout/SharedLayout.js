@@ -31,16 +31,10 @@ function SharedLayout() {
 const currentPageName = Object.keys(pageNames)
   .sort((a, b) => b.length - a.length)
   .find((path) => location.pathname.startsWith(path)) || 'Page';
-  console.log(currentPageName)
   // outputs '/'
   
   React.useEffect(() => {
     window.scrollTo(0, 0);
-    console.log('Current path',location.pathname) 
-    // outputs '/Transactions'
-    console.log('Current page name', pageNames[currentPageName])
-    // outputs 'Transactions' now when we are on the /Transactions page
-
   }, [location]);
 
   return (

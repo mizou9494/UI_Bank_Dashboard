@@ -1,4 +1,4 @@
-import { DollarSign, Facebook, Home, User, CreditCard, Moon, Settings } from "react-feather"
+import { DollarSign, Facebook, Home, User, CreditCard, Moon, Settings, ArrowUpCircle, ArrowDownCircle } from "react-feather"
 
 export const LinksData = [
   {
@@ -197,26 +197,59 @@ export const transaction_Info = [
     {
         id: 1,
         Icon: DollarSign,
-        icontype: "DollarSign",
+        DirectionIcon: ArrowUpCircle,
+        iconType: "DollarSign",
         description: 'Deposit from my',
         date: "28 January 2021",
         amount: '$200',
         positive: "true"
-    },
-    {
+      },
+      {
         id: 2,
         Icon: DollarSign,
-        icontype: "DollarSign",
+        DirectionIcon: ArrowUpCircle,
+        iconType: "DollarSign",
         description: 'Jimie Wilson',
         date: "02 January 2021",
         amount: '$5,840',
         positive: "true"
-    },
-    {
+      },
+      {
         id: 3,
         Icon: Facebook,
-        icontype: "Facebook",
+        DirectionIcon: ArrowDownCircle,
+        iconType: "Facebook",
         description: 'Deposit Paypal',
+        date: "25 January 2021",
+        amount: '$2500',
+        positive: "false"
+      },
+      {
+        id: 4,
+        Icon: Facebook,
+        DirectionIcon: ArrowDownCircle,
+        iconType: "Facebook",
+        description: 'Spotify Subsciption',
+        date: "25 January 2021",
+        amount: '$2500',
+        positive: "false"
+      },
+      {
+        id: 5,
+        Icon: Facebook,
+        DirectionIcon: ArrowDownCircle,
+        iconType: "Facebook",
+        description: 'Freepik Sales',
+        date: "25 January 2021",
+        amount: '$2500',
+        positive: "false"
+      },
+      {
+        id: 6,
+        Icon: Facebook,
+        DirectionIcon: ArrowDownCircle,
+        iconType: "Facebook",
+        description: 'Mobile Service',
         date: "25 January 2021",
         amount: '$2500',
         positive: "false"

@@ -1,12 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { useLocation } from 'react-router-dom';
 
-function Transaction({id, description, date, Icon, iconType, amount, positive}) {
+import { ArrowDownCircle, ArrowUpCircle } from 'react-feather';
+
+function Transaction({description, DirectionIcon, date, Icon, iconType, amount, positive}) {
+
+  const location = useLocation();
+  console.log({ Icon, DirectionIcon });
   return (
     <Wrapper>
-      <IconWrapper $iconType={iconType}>
-        <Icon />
+      <IconWrapper $location={location.pathname} $iconType={iconType}>
+        {location.pathname === "/Transactions" ? <DirectionIcon size={45} color="gray" /> : <Icon size={45} />}
+        {/* <ArrowDownCircle />
+        <ArrowUpCircle /> */}
       </IconWrapper>
       <MiddlePart>
         <TransactionDescription>
@@ -28,6 +36,11 @@ const Wrapper = styled.div`
   align-items: center;
   gap: 20px;
 
+  &:not(:last-of-type) {
+    // padding-bottom: 2px;
+    // margin-bottom: 2px;
+    border-bottom: 1px solid #EAF0FF;
+  }
   // p  {
   //   margin-left: auto;
   // }
@@ -60,15 +73,16 @@ const MiddlePart = styled.div`
 const IconWrapper = styled.div`
   display: grid;
   place-content: center;
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
+  background-color: ${(props) => props.$location === "/Transactions" && "white"} !important;
   background-color: ${(props) => {
     switch (props.$iconType) {
       case "Facebook":
-        return "#e7edff";
+        return "blue";
       case "DollarSign":
-        return "#fff5d9";
+        return "yellow";
       default:
         return "#3b5998";
     }
@@ -87,8 +101,8 @@ const IconWrapper = styled.div`
   }};
   
   svg {
-    width: 25px;
-    height: 25px;
+    // width: 30px;
+    // height: 30px;
     font-weight: 500;
   }
 `
