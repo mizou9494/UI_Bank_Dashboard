@@ -12,9 +12,7 @@ function Transaction({description, DirectionIcon, date, Icon, iconType, amount, 
   return (
     <Wrapper>
       <IconWrapper $location={location.pathname} $iconType={iconType}>
-        {location.pathname === "/Transactions" ? <DirectionIcon size={45} color="gray" /> : <Icon size={45} />}
-        {/* <ArrowDownCircle />
-        <ArrowUpCircle /> */}
+        {location.pathname === "/Transactions" ? <DirectionIcon size={45} color="gray" /> : <Icon size={25} />}
       </IconWrapper>
       <MiddlePart>
         <TransactionDescription>
@@ -37,13 +35,10 @@ const Wrapper = styled.div`
   gap: 20px;
 
   &:not(:last-of-type) {
-    // padding-bottom: 2px;
-    // margin-bottom: 2px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
     border-bottom: 1px solid #EAF0FF;
   }
-  // p  {
-  //   margin-left: auto;
-  // }
 `;
 
 const TransactionDescription = styled.p`
@@ -73,20 +68,19 @@ const MiddlePart = styled.div`
 const IconWrapper = styled.div`
   display: grid;
   place-content: center;
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background-color: ${(props) => props.$location === "/Transactions" && "white"} !important;
   background-color: ${(props) => {
     switch (props.$iconType) {
       case "Facebook":
-        return "blue";
+        return "#e7edff";
       case "DollarSign":
-        return "yellow";
+        return "#fff5d9";
       default:
         return "#3b5998";
     }
-    // props.Icon === DollarSign ? "#396aff" : "#ffbb38"};
   }};
 
   color: ${(props) => {
