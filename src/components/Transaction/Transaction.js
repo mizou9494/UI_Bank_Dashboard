@@ -21,7 +21,7 @@ function Transaction({description, DirectionIcon, date, Icon, iconType, amount, 
         <span>{date}</span>
       </MiddlePart>
       <AmountPart $positive={positive}>
-        <span>{positive === "true" ? "+" : "-"}{amount}</span>
+        <span>{positive === "true" ? "+" : "-"}</span><span>{amount}</span>
       </AmountPart>
     </Wrapper>
   ) 
@@ -52,8 +52,9 @@ const AmountPart = styled.div`
   font-weight: 500;
   font-size: 20px;
   margin-left: auto;
-  display: grid;
-  place-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: ${(props) => props.$positive === "true" ? "green" : "red"};
 `
 

@@ -70,7 +70,12 @@ const TransactionsGroup = styled.div`
 `;
 
 const TransactionsPageGroup = styled(TransactionsGroup)`
- 
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  // grid-auto-flow: column;
+  // grid-template-rows: repeat(3, 1fr);
+  overflow: hidden;
+  gap: 10px;
 `
 
 export default RecentTransaction;

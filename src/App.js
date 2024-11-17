@@ -7,9 +7,9 @@ import {QUERIES} from './constants';
 import SharedLayout from '../src/components/SharedLayout';
 import Overview from './components/Overview';
 import RecentTransactions from './components/RecentTransaction';
+import CreditCards from './components/CreditCards';
 // import Accounts from './components/Accounts';
 // import Investments from './components/Investments';
-// import CreditCards from './components/CreditCards';
 // import Loans from './components/Loans';
 // import Services from './components/Services';
 // import Settings from './components/Settings';
@@ -25,9 +25,9 @@ function App() {
           <Route path="/" element={<SharedLayout />}>
               <Route index element={<Overview />} />
               <Route path="/Transactions" element={<RecentTransactions />} />
+              <Route path="/Credit_Cards" element={<CreditCards />} />
               {/* <Route path="/Accounts" element={<Accounts />} />
               <Route path="/Investments" element={<Investments />} />
-              <Route path="/Credit_Cards" element={<CreditCards />} />
               <Route path="/Loans" element={<Loans />} />
               <Route path="/Services" element={<Services />} />
               <Route path="/Settings" element={<Settings />} /> */}
