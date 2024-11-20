@@ -22,7 +22,7 @@ function RecentTransaction() {
       </SectionHead>
       {location.pathname === "/" ? (
         <TransactionsGroup>
-          {transaction_Info.map(({id, description, date, amount, Icon, iconType, positive}) => (
+          {transaction_Info.slice(0, 4).map(({id, description, date, amount, Icon, iconType, positive}) => (
             <Transaction
               key={id}
               description={description}
