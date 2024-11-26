@@ -7,19 +7,33 @@ import ReactEcharts from 'echarts-for-react'
 function CardExpenseStats() {
   const option = {
     tooltip: {},
-    xAxis: {
-      data: ['shirt', 'cardigan', 'chiffon', 'pants', 'heels', 'socks'],
+    legend: {
+      display: false
     },
     yAxis: {},
     series: [
       {
-        name: 'sales',
         type: 'pie',
-        radius: ['30%', '70%'],
-        roseType: 'area',
-        data: [5, 20, 36, 10, 10, 20],
-      },
-    ],
+        data: [
+          {
+            value: 100,
+            name: 'BMCE Bank'
+          },
+          {
+            value: 150,
+            name: 'UBA Bank'
+          },
+          {
+            value: 200,
+            name: 'Zenith Bank'
+          },
+          {
+            value: 300,
+            name: 'Access Bank'
+          }
+        ]
+      }
+    ]
   };
 
   return (

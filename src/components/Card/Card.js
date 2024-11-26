@@ -1,32 +1,32 @@
 import React from 'react';
 import styled from 'styled-components';
 
-function Card({holder_name, card_number, expiration_date, balance}) {
+
+function Card({isHovered, holder_name, card_number, expiration_date, balance}) {
+  console.log(isHovered);
   return (
-    <Wrapper>
-      <div>
-        <BalanceRow>
-          <InfoColumn>
-            <Label>Balance</Label>
-            <DataLabel>{balance}</DataLabel>
-          </InfoColumn> 
-          <ChipIcon src='../../images/chip.png' alt='chip' />
-        </BalanceRow>
-        <SecondInfoRow>
-          <InfoColumn>
-            <Label>CARD HOLDER</Label>
-            <DataLabel>{holder_name}</DataLabel>
-          </InfoColumn>
-          <InfoColumn>
-            <Label>VALID THRU</Label>
-            <DataLabel>{expiration_date}</DataLabel>
-          </InfoColumn>
-        </SecondInfoRow>
-        <NumberRow>
-          <p>{card_number}</p>
-          <MasterLogo src='../../images/masterCard.png' />
-        </NumberRow>
-      </div>
+    <Wrapper $isHovered={isHovered}>
+      <BalanceRow>
+        <InfoColumn>
+          <Label>Balance</Label>
+          <DataLabel>{balance}</DataLabel>
+        </InfoColumn> 
+        <ChipIcon src='../../images/chip.png' alt='chip' />
+      </BalanceRow>
+      <SecondInfoRow>
+        <InfoColumn>
+          <Label>CARD HOLDER</Label>
+          <DataLabel>{holder_name}</DataLabel>
+        </InfoColumn>
+        <InfoColumn>
+          <Label>VALID THRU</Label>
+          <DataLabel>{expiration_date}</DataLabel>
+        </InfoColumn>
+      </SecondInfoRow>
+      <NumberRow>
+        <p>{card_number}</p>
+        <MasterLogo src='../../images/masterCard.png' />
+      </NumberRow>
     </Wrapper>
   )
 }
@@ -37,6 +37,8 @@ const Wrapper = styled.div`
   padding: 24px;
   background: linear-gradient(135deg, rgba(76,73,237,1) 13%, rgba(4,0,255,1) 46%);
   border-radius: 18px;
+  transform: ${({$isHovered}) => $isHovered ? 'rotateY(0deg)' : 'rotateY(90deg)'}; 
+  transition: transform 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 `;
 
 const Label = styled.label`

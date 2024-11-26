@@ -8,7 +8,7 @@ import { ArrowDownCircle, ArrowUpCircle } from 'react-feather';
 function Transaction({description, DirectionIcon, date, Icon, iconType, amount, positive}) {
 
   const location = useLocation();
-  console.log({ Icon, DirectionIcon });
+  
   return (
     <Wrapper>
       <IconWrapper $location={location.pathname} $iconType={iconType}>

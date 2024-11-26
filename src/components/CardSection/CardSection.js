@@ -8,15 +8,18 @@ import styled from 'styled-components';
 import Card from '../Card/Card';
 
 function CardSection({ buttonName = "See All" }) {
+  const [isHovered, setIsHovered] = React.useState(false);
+
   return (
     <>
       <SectionHead>
         <h3>My Cards</h3>
         <Button>{buttonName === "See All" ? buttonName : <><Plus size={20} />{buttonName}</>}</Button>
       </SectionHead>
-      <CardSectionWrapper>
+      <CardSectionWrapper onMouseLeave={() => setIsHovered(false)} onMouseEnter={() => setIsHovered(true)}>
         {card_Info.map(({id, holder_name, card_number, expiration_date, balance}) => (
           <Card 
+            isHovered={isHovered}
             key={id}
             holder_name={holder_name}
             card_number={card_number}
