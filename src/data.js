@@ -277,7 +277,7 @@ export const transaction_Info = [
   {
     id: 9,
     Icon: Facebook,
-    DirectionIcon: ArrowDownCircle,
+    DirectionIcon: ArrowUpCircle,
     iconType: "Facebook",
     description: 'Mobile Service',
     date: "25 January 2021",

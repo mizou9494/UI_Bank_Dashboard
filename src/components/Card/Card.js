@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 
 function Card({isHovered, holder_name, card_number, expiration_date, balance}) {
-  console.log(isHovered);
+
   return (
     <Wrapper $isHovered={isHovered}>
       <BalanceRow>

@@ -1,15 +1,37 @@
 import React from 'react';
 
+import { useLocation } from 'react-router-dom';
+
 import styled from 'styled-components';
 
 import CardSection from '../CardSection';
 
+import { 
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext, 
+} from '../ui/carousel';
+import { Card, CardContent } from '../ui/card';
+
 import Transaction from '../Transaction/Transaction';
 import { transaction_Info } from '../../data';
-import { useLocation } from 'react-router-dom';
+import { Axis } from 'echarts';
+
+function chunkArray(array, size) {
+  const chunks = [];
+  for (let i = 0; i < array.length; i += size) {
+    chunks.push(array.slice(i, i + size));
+  }
+  return chunks;
+}
 function RecentTransaction() {
 
   const location = useLocation();
+
+  const transactionChunks = chunkArray(transaction_Info, 5);
+  console.log(transactionChunks)
 
   return (
     <>
@@ -36,18 +58,34 @@ function RecentTransaction() {
         </TransactionsGroup>
      ) : (
        <TransactionsPageGroup>
-          {transaction_Info.map(({id, DirectionIcon, description, date, amount, Icon, iconType, positive}) => (
-            <Transaction
-              key={id}
-              description={description}
-              date={date}
-              amount={amount}
-              positive={positive}
-              Icon={Icon}
-              DirectionIcon={DirectionIcon}
-              iconType={iconType}
-            />
-          ))}
+          <Carousel 
+            opts={{
+              align: 'start',
+              axis: "x"
+            }}  
+            orientation="horizontal"
+            className="w-full p-8">
+            <CarouselContent>
+              {transactionChunks.map((chunk, index) => (
+                <CarouselItem key={index}>
+                  {chunk.map(({id, description, date, amount, Icon, DirectionIcon, iconType, positive}) => (
+                    <Transaction
+                      key={id}
+                      description={description}
+                      date={date}
+                      amount={amount}
+                      positive={positive}
+                      Icon={Icon}
+                      DirectionIcon={DirectionIcon}
+                      iconType={iconType}
+                    />
+                  ))}
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            {/* <CarouselPrevious />
+            <CarouselNext /> */}
+          </Carousel>
         </TransactionsPageGroup>
      )}
     </>
@@ -71,7 +109,7 @@ const TransactionsGroup = styled.div`
 
 const TransactionsPageGroup = styled(TransactionsGroup)`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   // grid-auto-flow: column;
   // grid-template-rows: repeat(3, 1fr);
   overflow: hidden;
