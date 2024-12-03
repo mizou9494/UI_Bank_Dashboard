@@ -13,7 +13,7 @@ import {
   CarouselPrevious,
   CarouselNext, 
 } from '../ui/carousel';
-import { Card, CardContent } from '../ui/card';
+import useEmblaCarousel from 'embla-carousel-react'
 
 import Transaction from '../Transaction/Transaction';
 import { transaction_Info } from '../../data';
@@ -27,6 +27,14 @@ function chunkArray(array, size) {
   return chunks;
 }
 function RecentTransaction() {
+
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false })
+
+  React.useEffect(() => {
+    if (emblaApi) {      
+      console.log(emblaApi.slideNodes())
+    }
+  }, [emblaApi])
 
   const location = useLocation();
 
@@ -58,7 +66,15 @@ function RecentTransaction() {
         </TransactionsGroup>
      ) : (
        <TransactionsPageGroup>
-          <Carousel 
+          <Embla ref={emblaRef}>
+            <Embla__container>
+              <Embla__slide>Slide1</Embla__slide>
+              <Embla__slide>Slide2</Embla__slide>
+              <Embla__slide>Slide3</Embla__slide>
+              <Embla__slide>Slide4</Embla__slide>
+            </Embla__container>
+          </Embla>
+          {/* <Carousel 
             opts={{
               align: 'start',
               axis: "x"
@@ -84,13 +100,31 @@ function RecentTransaction() {
               ))}
             </CarouselContent>
             {/* <CarouselPrevious />
-            <CarouselNext /> */}
-          </Carousel>
+            <CarouselNext /> 
+          </Carousel> */}
         </TransactionsPageGroup>
      )}
     </>
   ) 
 }
+
+const Embla = styled.div`
+  overflow: hidden;
+`;
+
+const Embla__container = styled.div`
+  display: flex;
+`;
+
+const Embla__slide = styled.div`
+  flex: 0 0 100%;
+  min-width: 0;
+  background-color: red;
+  height: 100px;
+  display: grid;
+  place-items: center;
+`;
+
 
 const SectionHead = styled.div`
   margin-top: 20px;
