@@ -68,10 +68,22 @@ function RecentTransaction() {
        <TransactionsPageGroup>
           <Embla ref={emblaRef}>
             <Embla__container>
-              <Embla__slide>Slide1</Embla__slide>
-              <Embla__slide>Slide2</Embla__slide>
-              <Embla__slide>Slide3</Embla__slide>
-              <Embla__slide>Slide4</Embla__slide>
+              {transactionChunks.map((chunk, index) => (
+                <Embla__slide key={index}> 
+                  {chunk.map(({id, description, date, amount, Icon, DirectionIcon, iconType, positive}) => (
+                      <Transaction
+                        key={id}
+                        description={description}
+                        date={date}
+                        amount={amount}
+                        positive={positive}
+                        Icon={Icon}
+                        DirectionIcon={DirectionIcon}
+                        iconType={iconType}
+                      />
+                    ))}
+                </Embla__slide>
+              ))}
             </Embla__container>
           </Embla>
           {/* <Carousel 
@@ -119,10 +131,10 @@ const Embla__container = styled.div`
 const Embla__slide = styled.div`
   flex: 0 0 100%;
   min-width: 0;
-  background-color: red;
-  height: 100px;
-  display: grid;
-  place-items: center;
+  // background-color: red;
+  // height: 100px;
+  // display: grid;
+  // place-items: center;
 `;
 
 
