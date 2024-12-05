@@ -28,7 +28,7 @@ function chunkArray(array, size) {
 }
 function RecentTransaction() {
 
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false })
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true })
 
   React.useEffect(() => {
     if (emblaApi) {      
