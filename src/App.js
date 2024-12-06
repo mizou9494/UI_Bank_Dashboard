@@ -8,6 +8,7 @@ import SharedLayout from '../src/components/SharedLayout';
 import Overview from './components/Overview';
 import RecentTransactions from './components/RecentTransaction';
 import CreditCards from './components/CreditCards';
+import Accounts from './components/Accounts';
 // import Accounts from './components/Accounts';
 // import Investments from './components/Investments';
 // import Loans from './components/Loans';
@@ -26,6 +27,7 @@ function App() {
               <Route index element={<Overview />} />
               <Route path="/Transactions" element={<RecentTransactions />} />
               <Route path="/Credit_Cards" element={<CreditCards />} />
+              <Route path="/Accounts" element={<Accounts />} />
               {/* <Route path="/Accounts" element={<Accounts />} />
               <Route path="/Investments" element={<Investments />} />
               <Route path="/Loans" element={<Loans />} />

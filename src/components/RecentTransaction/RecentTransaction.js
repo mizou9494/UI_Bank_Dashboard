@@ -6,18 +6,17 @@ import styled from 'styled-components';
 
 import CardSection from '../CardSection';
 
-import { 
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselPrevious,
-  CarouselNext, 
-} from '../ui/carousel';
+// import { 
+//   Carousel,
+//   CarouselContent,
+//   CarouselItem,
+//   CarouselPrevious,
+//   CarouselNext, 
+// } from '../ui/carousel';
 import useEmblaCarousel from 'embla-carousel-react'
 
 import Transaction from '../Transaction/Transaction';
 import { transaction_Info } from '../../data';
-import { Axis } from 'echarts';
 
 function chunkArray(array, size) {
   const chunks = [];
