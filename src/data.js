@@ -1,4 +1,43 @@
+import { Icon } from "lucide-react";
 import { DollarSign, Facebook, Home, User, CreditCard, Moon, Settings, ArrowUpCircle, ArrowDownCircle } from "react-feather"
+
+import { TbMoneybag, TbPigMoney, TbReportMoney, TbZoomMoney } from "react-icons/tb";
+
+export const expenses_accountPage = [
+  {
+    id: 1,
+    Icon: TbMoneybag,
+    title: 'My Balance',
+    amount: '$12,750',
+    color: "#FFBB38",
+    backgroundColor: "#FFF5D9"
+  },
+  {
+    id: 2,
+    Icon: TbReportMoney,
+    title: 'Income',
+    amount: '$5,600',
+    color: "#396AFF",
+    backgroundColor: "#E7EDFF"
+  },
+  {
+    id: 3,
+    Icon: TbZoomMoney,
+    title: 'Expense',
+    amount: '$3,460',
+    color: "#FF82AC",
+    backgroundColor: "#FFE0EB"
+  },
+  {
+    id: 4,
+    Icon: TbPigMoney,
+    title: 'Total Saving',
+    amount: '$7,920',
+    color: "#16DBCC",
+    backgroundColor: "#DCFAF8"
+  },
+
+]
 
 export const LinksData = [
   {
