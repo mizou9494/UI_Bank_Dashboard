@@ -6,7 +6,7 @@ import { expenses_accountPage } from '../../data';
 
 function Accounts() {
   return (
-    <div className='grid place-content-center grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 bg-gray-50'>
+    <div className='grid place-content-end grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 bg-slate-300'>
       {expenses_accountPage.map(({id, Icon, title, amount, color, backgroundColor}) => (
         <Card key={id}>
           <IconSide $backgroundColor={backgroundColor}>
@@ -36,9 +36,10 @@ const Card = styled.div`
   gap: 10px;
   justify-content: center;
   align-items: center;
-  max-width: max-content;
-  background-color: 'white';
-  border-radius: 20px;
+  width: 155px;
+  // min-width: 150px;
+  background-color: white;
+  border-radius: 10px;
   padding: 10px 20px;
 `
 
