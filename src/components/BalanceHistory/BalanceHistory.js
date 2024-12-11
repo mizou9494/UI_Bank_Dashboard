@@ -3,12 +3,23 @@ import React from 'react';
 import styled from 'styled-components';
 import {Balance_History} from '../../data';
 
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import LineChart from '../LineChart/LineChart';
 
 function BalanceHistory() {
   const navigate = useNavigate();
+
+  const { hash } = useLocation();
+
+  React.useEffect(() => {
+    if(hash){
+      const element = document.querySelector(hash);
+      if(element){
+        element.scrollIntoView();
+      } 
+    }
+  }, [hash]);
 
   const [data, setData] = React.useState({
     labels: Balance_History.labels,
@@ -32,7 +43,7 @@ function BalanceHistory() {
 
     <>
       <SectionHead>
-        <h3>Balance History</h3>
+        <h3 id='test'>Balance History</h3>
       </SectionHead>
       <Wrapper>
         <LineChart data={data} />

@@ -1,19 +1,21 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 import styled from 'styled-components';
 
 import { expenses_accountPage } from '../../data';
 
 function Accounts() {
   return (
-    <div className='grid place-content-end grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 bg-slate-300'>
+    <div className='grid place-content-end grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 bg-slate-300 px-8 py-4'>
       {expenses_accountPage.map(({id, Icon, title, amount, color, backgroundColor}) => (
         <Card key={id}>
           <IconSide $backgroundColor={backgroundColor}>
             <Icon color={color} size={30} />
           </IconSide>
           <OtherSide>
-            <span>{title}</span>
+            <Link to='/#test'><span>{title}</span></Link>
             <span>{amount}</span>
           </OtherSide>
         </Card>
@@ -36,7 +38,7 @@ const Card = styled.div`
   gap: 10px;
   justify-content: center;
   align-items: center;
-  width: 155px;
+  // width: 155px;
   // min-width: 150px;
   background-color: white;
   border-radius: 10px;

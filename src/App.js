@@ -28,20 +28,21 @@ function App() {
               <Route path="/Transactions" element={<RecentTransactions />} />
               <Route path="/Credit_Cards" element={<CreditCards />} />
               <Route path="/Accounts" element={<Accounts />} />
-              {/* <Route path="/Accounts" element={<Accounts />} />
-              <Route path="/Investments" element={<Investments />} />
-              <Route path="/Loans" element={<Loans />} />
-              <Route path="/Services" element={<Services />} />
-              <Route path="/Settings" element={<Settings />} /> */}
-              {/* this below is a the route for the quran surat*/}
-              {/* <Route path="/:surahId" element={<Surah />} />
-              <Route path="/:surahId/:verseNumber" element={<SurahWithSingleVerse />} /> */}
           </Route>
         </Routes>
       </>
     </div>
   );
 }
+{/* <Route path="/Accounts" element={<Accounts />} />
+<Route path="/Investments" element={<Investments />} />
+<Route path="/Loans" element={<Loans />} />
+<Route path="/Services" element={<Services />} />
+<Route path="/Settings" element={<Settings />} /> */}
+
+{/* this below is a the route for the quran surat*/}
+{/* <Route path="/:surahId" element={<Surah />} />
+<Route path="/:surahId/:verseNumber" element={<SurahWithSingleVerse />} /> */}
 {/* <Header />
 <MaxWidthWrapper as='main'>
   <CardSection />
