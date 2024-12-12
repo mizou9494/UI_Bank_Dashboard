@@ -8,7 +8,7 @@ import { expenses_accountPage } from '../../data';
 
 function Accounts() {
   return (
-    <div className='grid place-content-end grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 bg-slate-300 px-8 py-4'>
+    <div className='grid place-content-end grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-4 bg-slate-300 px-4 md:px-8 py-4'>
       {expenses_accountPage.map(({id, Icon, title, amount, color, backgroundColor}) => (
         <Card key={id}>
           <IconSide $backgroundColor={backgroundColor}>
