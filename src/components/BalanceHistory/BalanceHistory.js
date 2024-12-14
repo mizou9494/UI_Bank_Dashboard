@@ -14,6 +14,7 @@ function BalanceHistory() {
 
   React.useEffect(() => {
     if(hash){
+      console.log("hash ".toUpperCase(), hash);
       const element = document.querySelector(hash);
       if(element){
         element.scrollIntoView();
