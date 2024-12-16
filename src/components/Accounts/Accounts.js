@@ -20,15 +20,6 @@ function Accounts() {
           </OtherSide>
         </Card>
       ))}
-      {/* <Card>
-        <IconSide>
-          <TbPigMoney color='green' size={30} />
-        </IconSide>
-        <OtherSide>
-          <span>Accounts</span>
-          <span>$5,600</span>
-        </OtherSide>
-      </Card> */}
     </div>
   )
 }
@@ -38,8 +29,6 @@ const Card = styled.div`
   gap: 10px;
   justify-content: center;
   align-items: center;
-  // width: 155px;
-  // min-width: 150px;
   background-color: white;
   border-radius: 10px;
   padding: 10px 20px;

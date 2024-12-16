@@ -85,34 +85,6 @@ function RecentTransaction() {
               ))}
             </Embla__container>
           </Embla>
-          {/* <Carousel 
-            opts={{
-              align: 'start',
-              axis: "x"
-            }}  
-            orientation="horizontal"
-            className="w-full p-8">
-            <CarouselContent>
-              {transactionChunks.map((chunk, index) => (
-                <CarouselItem key={index}>
-                  {chunk.map(({id, description, date, amount, Icon, DirectionIcon, iconType, positive}) => (
-                    <Transaction
-                      key={id}
-                      description={description}
-                      date={date}
-                      amount={amount}
-                      positive={positive}
-                      Icon={Icon}
-                      DirectionIcon={DirectionIcon}
-                      iconType={iconType}
-                    />
-                  ))}
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            {/* <CarouselPrevious />
-            <CarouselNext /> 
-          </Carousel> */}
         </TransactionsPageGroup>
      )}
     </>

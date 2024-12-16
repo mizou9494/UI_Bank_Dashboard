@@ -36,7 +36,6 @@ function BalanceHistory() {
       showPoints: false,
       hoverBorderColor: 'red',
       radius: 5
-      // indexAxis: 'y'
     }]
   });
 

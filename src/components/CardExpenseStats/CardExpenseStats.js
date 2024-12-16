@@ -14,13 +14,6 @@ function CardExpenseStats() {
       orient: 'vertical',
       left: 'left'
     },
-    // grid: {
-    //   left: '10%',
-    //   right: '10%',
-    //   bottom: '10%',
-    //   containLabel: true,
-    // },
-    // yAxis: {},
     series: [
       {
         name: 'Bank Distribution',
@@ -55,36 +48,7 @@ function CardExpenseStats() {
       }
     ]
   };
-  // option = {
-  //   series: [
-  //     {
-  //       type: 'pie',
-  //       data: [
-  //         {
-  //           value: 100,
-  //           name: 'A'
-  //         },
-  //         {
-  //           value: 200,
-  //           name: 'B'
-  //         },
-  //         {
-  //           value: 300,
-  //           name: 'C'
-  //         },
-  //         {
-  //           value: 400,
-  //           name: 'D'
-  //         },
-  //         {
-  //           value: 500,
-  //           name: 'E'
-  //         }
-  //       ],
-  //       roseType: 'area'
-  //     }
-  //   ]
-  // };
+  
   return (
     <>
       <SectionHead>Card Expense Statistics</SectionHead>
