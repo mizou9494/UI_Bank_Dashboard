@@ -21,7 +21,7 @@ function CardExpenseStats() {
         radius: ['50%', '70%'],
         data: [
           {
-            value: 100,
+            value: 400,
             name: 'BMCE Bank'
           },
           {
@@ -41,14 +41,14 @@ function CardExpenseStats() {
         emphasis: {
           itemStyle: {
             shadowBlur: 10,
-            shadowOffsetX: 0,
+            shadowOffsetX: 1,
             shadowColor: 'rgba(0, 0, 0, 0.5)',
           },
         },
       }
     ]
   };
-  
+
   return (
     <>
       <SectionHead>Card Expense Statistics</SectionHead>
@@ -58,6 +58,7 @@ function CardExpenseStats() {
 }
 
 const SectionHead = styled.h2`
+  margin-top: 20px;
   width: 100%;
   display: flex;
   justify-content: flex-start;
