@@ -21,6 +21,7 @@ function CardList() {
   )
 }
 
+
 const CardListWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -28,11 +29,13 @@ const CardListWrapper = styled.div`
   align-items: center;
 `
 
+
 const ListItem = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
 `
+
 
 const SectionHead = styled.h2`
   margin-top: 20px;
@@ -40,5 +43,6 @@ const SectionHead = styled.h2`
   display: flex;
   justify-content: flex-start;
 `
+
 
 export default CardList;
