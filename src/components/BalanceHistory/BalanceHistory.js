@@ -25,9 +25,13 @@ function BalanceHistory() {
   const [data, setData] = React.useState({
     labels: Balance_History.labels,
     datasets: [{
+
       label: 'Balance History',
+      
       data: Balance_History.data,
+      
       fill: false,
+      
       backgroundColor: 'green',
       borderColor: 'blue',
       tension: .8,
