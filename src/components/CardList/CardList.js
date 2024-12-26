@@ -23,12 +23,15 @@ function CardList() {
       <CardListWrapper>
         <ListItem>
           <IconWrapper><TbMoneybag color='red' size={40} /></IconWrapper>
+          <DetailButton>View details</DetailButton>
         </ListItem>
         <ListItem>
           <IconWrapper><TbMoneybag color='blue' size={40} /></IconWrapper>
+          <DetailButton>View details</DetailButton>
         </ListItem>
         <ListItem>
           <IconWrapper><TbMoneybag color='white' size={40} /></IconWrapper>
+          <DetailButton>View details</DetailButton>
         </ListItem>
       </CardListWrapper>  
     </>
@@ -42,6 +45,11 @@ const CardListWrapper = styled.div`
   justify-content: center;
   align-items: center;
 
+`
+
+const DetailButton = styled.div`
+  color: blue;
+  cursor: pointer;
 `
 
 const IconWrapper = styled.div`
