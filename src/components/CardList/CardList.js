@@ -44,7 +44,6 @@ const CardListWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 `
 
 const DetailButton = styled.div`
