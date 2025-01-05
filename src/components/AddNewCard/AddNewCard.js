@@ -7,8 +7,6 @@ function AddNewCard() {
       <h2>Add New Card</h2>
       <Input />
       <Input />
-      <Input />
-      <Input />
     </>
   )
 }
